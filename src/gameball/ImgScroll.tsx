@@ -15,7 +15,7 @@ const ImgScroll: React.FC<{ imgSrc: string }> = ({ imgSrc }) => {
   const leftMargin = interpolate(
 		frame,
 		[0, durationInFrames-30],
-		[0, 2200],
+		[0, 1000],
 		{
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
@@ -30,7 +30,8 @@ const ImgScroll: React.FC<{ imgSrc: string }> = ({ imgSrc }) => {
       alignItems: 'center',
       height: '100%',
       marginLeft: `-${leftMargin}px`,
-      left: '0px'
+      left: '0px',
+      zoom: '240%'
     }}>
       <Img src={staticFile(`${imgSrc}`)} placeholder={"logo"}  height={"500px"}  />
     </div>
